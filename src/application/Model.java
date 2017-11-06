@@ -1,7 +1,23 @@
 package application;
 
+
 public class Model {
-    public float calculate (long one, long two, String operator){
-        return 0;
+    public double calculate (long one, long two, String operator){
+        switch (operator){
+            case "+":
+                return one+two;
+            case "-":
+                return one-two;
+            case "*":
+                return one*two;
+            case "^":
+                return Math.pow(one,two);
+            case "/":
+                if (two==0)
+                    return 0;
+                return one/two;
+            default:
+                return 0;
+        }
     }
 }
